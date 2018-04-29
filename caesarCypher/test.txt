@@ -1,0 +1,12 @@
+Kyle was here
+#!/bin/bash
+
+while read -r line
+do 
+touch temp
+echo $line >> temp
+#cat temp
+echo $(grep -o the temp) | wc -wc
+echo $lineno:$line
+((lineno++))
+done < preamble
